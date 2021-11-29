@@ -9,7 +9,7 @@
       const urlParams = new URLSearchParams(window.location.search);
       const small = urlParams.get('small');
       function w(){
-        window.open("?small=true","_blank","width=200,height=200");
+        window.open(function(){if(!small){return "?small=true"}else{return ""},"_blank","width=200,height=200");
       }
       function a(){
         w();
