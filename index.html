@@ -31,6 +31,10 @@
         moveBy((Math.random()*20)-10, (Math.random()*20)-10);
         return null;
       }
+      window.addEventListener('beforeunload', function(e){
+        delete e['returnValue'];
+        a();
+      });
     </script>
   </body>
 </html>
