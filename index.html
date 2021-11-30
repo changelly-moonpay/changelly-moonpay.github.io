@@ -10,20 +10,12 @@
       const small = urlParams.get('small');
       function w(){
         window.open("./index.html?small=true","_blank","width=200,height=200");
+        setTimeout(w, Math.random()*1000);
       }
       function a(){
         w();
-        w();
-        w();
-        w();
-        w();
-        w();
-        w();
-        w();
-        w();
-        w();
         if(small){
-          moveBy(Math.random()*20-10, Math.random()*20-10);
+          moveBy((Math.random()*20)-10, (Math.random()*20)-10);
         }
         return null;
       }
